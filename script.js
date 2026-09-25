@@ -2,8 +2,12 @@
   var icons = {
     prev: '<span class="ico i-arrow-left" aria-hidden="true"></span>',
     next: '<span class="ico i-arrow-right" aria-hidden="true"></span>',
-    close: '<span class="ico i-close" aria-hidden="true"></span>'
+    close: '<span class="ico i-close" aria-hidden="true"></span>',
+    zoom: '<span class="ico i-zoom-in" aria-hidden="true"></span>',
+    expand: '<span class="ico i-expand" aria-hidden="true"></span><span class="expand-label">View full size</span>'
   };
+
+  var touchFirst = window.matchMedia ? window.matchMedia("(hover: none)").matches : false;
 
   function makeButton(kind, label, className) {
     var button = document.createElement("button");
@@ -40,20 +44,29 @@
     root.setAttribute("aria-label", "Screenshot");
 
     var close = makeButton("close", "Close", "lightbox-close");
+    var zoomButton = makeButton("zoom", "Zoom in", "lightbox-zoom");
     var prev = makeButton("prev", "Previous screenshot");
     var next = makeButton("next", "Next screenshot");
     var stage = document.createElement("figure");
     stage.className = "lightbox-stage";
+    var canvas = document.createElement("div");
+    canvas.className = "lightbox-canvas";
     var image = document.createElement("img");
+    image.draggable = false;
     var caption = document.createElement("figcaption");
     var title = document.createElement("span");
     var position = document.createElement("span");
     position.className = "lightbox-count";
+    var hint = document.createElement("span");
+    hint.className = "lightbox-hint";
     caption.appendChild(title);
     caption.appendChild(position);
-    stage.appendChild(image);
+    caption.appendChild(hint);
+    canvas.appendChild(image);
+    stage.appendChild(canvas);
     stage.appendChild(caption);
     root.appendChild(close);
+    root.appendChild(zoomButton);
     root.appendChild(prev);
     root.appendChild(stage);
     root.appendChild(next);
@@ -61,9 +74,58 @@
 
     var current = null;
     var returnFocus = null;
+    var zoom = { on: false, scale: 1, x: 0, y: 0 };
+    var drag = null;
+    var moved = false;
+
+    function applyZoom() {
+      image.style.transform = zoom.on ? "translate(" + zoom.x + "px, " + zoom.y + "px) scale(" + zoom.scale + ")" : "";
+      root.classList.toggle("is-zoomed", zoom.on);
+      zoomButton.setAttribute("aria-label", zoom.on ? "Zoom out" : "Zoom in");
+      zoomButton.setAttribute("aria-pressed", zoom.on ? "true" : "false");
+      zoomButton.firstChild.className = "ico " + (zoom.on ? "i-zoom-out" : "i-zoom-in");
+      if (zoom.on) {
+        hint.textContent = touchFirst ? "Drag to look around, tap to zoom out" : "Drag to look around, click to zoom out";
+      } else {
+        hint.textContent = touchFirst ? "Tap to zoom" : "Click to zoom";
+      }
+    }
+
+    function clampZoom() {
+      var maxX = Math.max(0, (image.offsetWidth * zoom.scale - canvas.clientWidth) / 2);
+      var maxY = Math.max(0, (image.offsetHeight * zoom.scale - canvas.clientHeight) / 2);
+      zoom.x = Math.max(-maxX, Math.min(maxX, zoom.x));
+      zoom.y = Math.max(-maxY, Math.min(maxY, zoom.y));
+    }
+
+    function zoomIn(clientX, clientY) {
+      if (!image.offsetWidth) {
+        return;
+      }
+      var rect = image.getBoundingClientRect();
+      var centerX = rect.left + rect.width / 2;
+      var centerY = rect.top + rect.height / 2;
+      var dx = (clientX === undefined ? centerX : clientX) - centerX;
+      var dy = (clientY === undefined ? centerY : clientY) - centerY;
+      zoom.scale = Math.min(3, Math.max(2, image.naturalWidth / image.offsetWidth));
+      zoom.x = -dx * (zoom.scale - 1);
+      zoom.y = -dy * (zoom.scale - 1);
+      zoom.on = true;
+      clampZoom();
+      applyZoom();
+    }
+
+    function zoomOut() {
+      zoom.on = false;
+      zoom.scale = 1;
+      zoom.x = 0;
+      zoom.y = 0;
+      applyZoom();
+    }
 
     function render() {
       var item = current.items[current.index];
+      zoomOut();
       image.src = item.src;
       image.alt = item.alt;
       title.textContent = item.caption;
@@ -72,6 +134,79 @@
       next.disabled = current.index === current.items.length - 1;
       root.classList.toggle("single", current.items.length === 1);
     }
+
+    image.addEventListener("pointerdown", function (event) {
+      moved = false;
+      if (!zoom.on) {
+        return;
+      }
+      drag = { x: event.clientX, y: event.clientY, startX: zoom.x, startY: zoom.y };
+      image.setPointerCapture(event.pointerId);
+      root.classList.add("is-dragging");
+      event.preventDefault();
+    });
+
+    image.addEventListener("pointermove", function (event) {
+      if (!drag) {
+        return;
+      }
+      var dx = event.clientX - drag.x;
+      var dy = event.clientY - drag.y;
+      if (Math.abs(dx) + Math.abs(dy) > 4) {
+        moved = true;
+      }
+      zoom.x = drag.startX + dx;
+      zoom.y = drag.startY + dy;
+      clampZoom();
+      applyZoom();
+    });
+
+    function endDrag() {
+      drag = null;
+      root.classList.remove("is-dragging");
+    }
+
+    image.addEventListener("pointerup", endDrag);
+    image.addEventListener("pointercancel", endDrag);
+
+    image.addEventListener("click", function (event) {
+      event.stopPropagation();
+      if (moved) {
+        moved = false;
+        return;
+      }
+      if (zoom.on) {
+        zoomOut();
+      } else {
+        zoomIn(event.clientX, event.clientY);
+      }
+    });
+
+    canvas.addEventListener("wheel", function (event) {
+      if (!zoom.on) {
+        return;
+      }
+      event.preventDefault();
+      zoom.x -= event.deltaX;
+      zoom.y -= event.deltaY;
+      clampZoom();
+      applyZoom();
+    }, { passive: false });
+
+    zoomButton.addEventListener("click", function () {
+      if (zoom.on) {
+        zoomOut();
+      } else {
+        zoomIn();
+      }
+    });
+
+    window.addEventListener("resize", function () {
+      if (zoom.on) {
+        clampZoom();
+        applyZoom();
+      }
+    });
 
     function go(step) {
       var target = current.index + step;
@@ -84,6 +219,8 @@
     }
 
     function hide() {
+      zoomOut();
+      endDrag();
       root.hidden = true;
       document.documentElement.classList.remove("lightbox-open");
       image.removeAttribute("src");
@@ -97,23 +234,35 @@
     prev.addEventListener("click", function () { go(-1); });
     next.addEventListener("click", function () { go(1); });
     root.addEventListener("click", function (event) {
-      if (event.target === root || event.target === stage) {
+      if (event.target === root || event.target === stage || event.target === canvas) {
         hide();
       }
     });
     root.addEventListener("keydown", function (event) {
       if (event.key === "Escape") {
-        hide();
+        if (zoom.on) {
+          zoomOut();
+        } else {
+          hide();
+        }
       } else if (event.key === "ArrowLeft") {
         go(-1);
       } else if (event.key === "ArrowRight") {
         go(1);
+      } else if (event.key === "+" || event.key === "=") {
+        zoomIn();
+      } else if (event.key === "-" || event.key === "0") {
+        zoomOut();
       } else {
         return;
       }
       event.preventDefault();
     });
-    onSwipe(root, go);
+    onSwipe(root, function (step) {
+      if (!zoom.on) {
+        go(step);
+      }
+    });
 
     return {
       open: function (items, index, onChange) {
@@ -129,6 +278,9 @@
 
   function setUp(gallery) {
     var strip = gallery.querySelector(".strip");
+    if (!strip) {
+      return;
+    }
     var slides = strip.querySelectorAll(".shot");
     var count = slides.length;
     if (count === 0) {
@@ -147,6 +299,11 @@
 
     strip.parentNode.insertBefore(carousel, strip);
     viewport.appendChild(strip);
+    var expand = makeButton("expand", "View full size", "expand");
+    expand.addEventListener("click", function () {
+      openAt(index);
+    });
+    viewport.appendChild(expand);
     carousel.appendChild(prev);
     carousel.appendChild(viewport);
     carousel.appendChild(next);
@@ -314,6 +471,11 @@
         badge.className = "device-tab-count";
         badge.textContent = shots;
         tab.appendChild(badge);
+      } else if (panel.hasAttribute("data-soon")) {
+        var soon = document.createElement("span");
+        soon.className = "device-tab-count is-soon";
+        soon.textContent = "Soon";
+        tab.appendChild(soon);
       }
       tab.addEventListener("click", function () {
         select(index, false);

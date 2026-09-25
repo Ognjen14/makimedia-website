@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=28">
+  <link rel="stylesheet" href="style.css?v=31">
 </head>
 <body>
 
@@ -88,14 +88,14 @@
     </ul>
 
     <div class="buttons">
-      <a class="btn primary" href="MICROSOFT_STORE_URL" target="_blank" rel="noopener">
+      <span class="btn primary is-soon" aria-disabled="true">
         <span class="ico i-microsoft" aria-hidden="true"></span>
-        <span><small>Get it from</small><strong>Microsoft Store</strong></span>
-      </a>
-      <a class="btn primary" href="GOOGLE_PLAY_URL" target="_blank" rel="noopener">
+        <span><small>Coming soon to</small><strong>Microsoft Store</strong></span>
+      </span>
+      <span class="btn primary is-soon" aria-disabled="true">
         <span class="ico i-google-play" aria-hidden="true"></span>
-        <span><small>Get it on</small><strong>Google Play</strong></span>
-      </a>
+        <span><small>Coming soon to</small><strong>Google Play</strong></span>
+      </span>
       <a class="btn" href="https://github.com/Ognjen14/Makimedia" target="_blank" rel="noopener">
         <span class="ico i-github" aria-hidden="true"></span>
         <span><small>Source code on</small><strong>GitHub</strong></span>
@@ -258,11 +258,11 @@
       <h3>Tablet</h3>
       <div class="strip">
         <figure class="shot">
-          <div class="frame"><img src="assets/tablet/connect.webp" alt="Home on a tablet offering to connect to a Makimedia server that is streaming" loading="lazy"></div>
+          <div class="frame"><img src="assets/tablet/connect.webp?v=2" alt="Home on a tablet offering to connect to a Makimedia server that is streaming" loading="lazy"></div>
           <figcaption>Finds your PC on its own</figcaption>
         </figure>
         <figure class="shot">
-          <div class="frame"><img src="assets/tablet/home.webp?v=2" alt="Home on a tablet, streaming the PC's library with continue watching and recently added" loading="lazy"></div>
+          <div class="frame"><img src="assets/tablet/home.webp?v=3" alt="Home on a tablet, streaming the PC's library with continue watching and recently added" loading="lazy"></div>
           <figcaption>Your PC's library, on the tablet</figcaption>
         </figure>
         <figure class="shot">
@@ -301,32 +301,14 @@
           <div class="frame"><img src="assets/tablet/settings.webp?v=2" alt="Settings on a tablet" loading="lazy"></div>
           <figcaption>Settings</figcaption>
         </figure>
-        <figure class="shot">
-          <div class="frame"><img src="assets/tablet/appearance.webp" alt="Appearance settings with a blue accent colour" loading="lazy"></div>
-          <figcaption>Choose an accent colour</figcaption>
-        </figure>
       </div>
     </div>
 
-    <div class="gallery phone">
+    <div class="gallery phone" data-soon>
       <h3>Phone</h3>
-      <div class="strip">
-        <figure class="shot">
-          <div class="frame">Screenshot: phone 1</div>
-          <figcaption>Home</figcaption>
-        </figure>
-        <figure class="shot">
-          <div class="frame">Screenshot: phone 2</div>
-          <figcaption>Film details</figcaption>
-        </figure>
-        <figure class="shot">
-          <div class="frame">Screenshot: phone 3</div>
-          <figcaption>Collections</figcaption>
-        </figure>
-        <figure class="shot">
-          <div class="frame">Screenshot: phone 4</div>
-          <figcaption>Player</figcaption>
-        </figure>
+      <div class="gallery-soon">
+        <span class="ico i-devices" aria-hidden="true"></span>
+        <p><strong>Coming soon</strong><span>Phone screenshots are on their way. Until then, the tablet shows how Makimedia looks on Android.</span></p>
       </div>
     </div>
 
@@ -810,15 +792,16 @@
     <div class="wrap">
       <h2>Get Makimedia</h2>
       <div class="buttons">
-        <a class="btn primary" href="MICROSOFT_STORE_URL" target="_blank" rel="noopener">
+        <span class="btn primary is-soon" aria-disabled="true">
           <span class="ico i-microsoft" aria-hidden="true"></span>
-          <span><small>Get it from</small><strong>Microsoft Store</strong></span>
-        </a>
-        <a class="btn primary" href="GOOGLE_PLAY_URL" target="_blank" rel="noopener">
+          <span><small>Coming soon to</small><strong>Microsoft Store</strong></span>
+        </span>
+        <span class="btn primary is-soon" aria-disabled="true">
           <span class="ico i-google-play" aria-hidden="true"></span>
-          <span><small>Get it on</small><strong>Google Play</strong></span>
-        </a>
+          <span><small>Coming soon to</small><strong>Google Play</strong></span>
+        </span>
       </div>
+      <p class="cta-note">Makimedia is on its way to both stores. The <a href="blog.html">blog</a> and its <a href="feed.xml">RSS feed</a> will say when it's out.</p>
     </div>
   </section>
 
@@ -844,7 +827,7 @@
   </div>
 </footer>
 
-<script src="script.js?v=14"></script>
+<script src="script.js?v=16"></script>
 <script src="nav.js?v=2"></script>
 </body>
 </html>
