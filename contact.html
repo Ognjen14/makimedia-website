@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - Makimedia</title>
+  <meta name="description" content="Questions, bug reports, ideas or copyright requests: get in touch with the Makimedia team.">
+  <meta name="theme-color" content="#1F1F1F">
+  <link rel="canonical" href="https://makimedia.org/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Makimedia">
+  <meta property="og:title" content="Contact Makimedia">
+  <meta property="og:description" content="Questions, bug reports, ideas or copyright requests: get in touch with the Makimedia team.">
+  <meta property="og:url" content="https://makimedia.org/contact.html">
+  <meta property="og:image" content="https://makimedia.org/assets/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=28">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-68.png" width="34" height="34" alt="">
+      Makimedia
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html#features">Features</a>
+      <a href="blog.html">Blog</a>
+      <a href="help.html">Help</a>
+      <a href="contribute.html">Contribute</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a class="nav-github" href="https://github.com/Ognjen14/Makimedia" target="_blank" rel="noopener"><span class="ico i-github" aria-hidden="true"></span><span class="nav-github-label">GitHub</span></a>
+    </nav>
+    <div class="header-actions">
+      <a class="nav-cta" href="index.html#download"><span class="ico i-download" aria-hidden="true"></span>Download</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="ico i-menu icon-open" aria-hidden="true"></span><span class="ico i-close icon-close" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<main class="contact-page wrap">
+  <div class="contact-head">
+    <h1>Get in touch</h1>
+    <p>Questions, bug reports, ideas or copyright requests. Every message is read by the person who makes Makimedia.</p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="form-card">
+      <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="8d3122ef-68df-480b-bede-351dc4972015">
+        <input type="hidden" name="subject" value="Makimedia: message from makimedia.org">
+        <input type="hidden" name="from_name" value="makimedia.org contact form">
+        <input type="hidden" name="redirect" value="https://makimedia.org/contact.html?sent=1">
+        <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="field-row">
+          <div class="field">
+            <label for="contact-name">Name <span class="optional">optional</span></label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100">
+          </div>
+          <div class="field">
+            <label for="contact-email">Email</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required maxlength="200">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="contact-topic">Topic</label>
+            <select id="contact-topic" name="topic" required>
+              <option value="" selected disabled>Choose a topic</option>
+              <option>Question</option>
+              <option>Bug report</option>
+              <option>Feature idea</option>
+              <option>Streaming help</option>
+              <option>Copyright or legal</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="contact-device">Device <span class="optional">optional</span></label>
+            <select id="contact-device" name="device">
+              <option value="" selected>Not about a device</option>
+              <option>Windows PC</option>
+              <option>Android phone</option>
+              <option>Android tablet</option>
+              <option>Android TV</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="7" required minlength="10" maxlength="5000" placeholder="For a bug, say what you did, what you expected and what happened instead."></textarea>
+        </div>
+
+        <p class="form-note">Your message is sent to our inbox through <a href="https://web3forms.com/" target="_blank" rel="noopener">Web3Forms</a>. We use your email address only to reply to you. See the <a href="privacy.html#contact-form">privacy policy</a>.</p>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-button">
+            <span class="ico i-send" aria-hidden="true"></span>
+            <span>Send message</span>
+          </button>
+          <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <div class="form-sent" id="contact-sent" hidden>
+        <div class="sent-icon"><span class="ico i-check" aria-hidden="true"></span></div>
+        <h2 tabindex="-1">Message sent</h2>
+        <p>Thanks for writing. We'll reply to the email address you gave, usually within a few days.</p>
+        <button type="button" class="text-button" id="contact-again">Send another message</button>
+      </div>
+    </div>
+
+    <aside class="contact-aside">
+      <div class="aside-item">
+        <span class="aside-icon"><span class="ico i-mail" aria-hidden="true"></span></span>
+        <div>
+          <h2>Prefer email?</h2>
+          <p>Write to <a href="mailto:support@makimedia.org">support@makimedia.org</a>. It reaches the same inbox.</p>
+        </div>
+      </div>
+      <div class="aside-item">
+        <span class="aside-icon"><span class="ico i-github" aria-hidden="true"></span></span>
+        <div>
+          <h2>Bugs and code</h2>
+          <p>Makimedia is open source. You can also report bugs or follow the work on <a href="https://github.com/Ognjen14/Makimedia/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+        </div>
+      </div>
+      <div class="aside-item">
+        <span class="aside-icon"><span class="ico i-info" aria-hidden="true"></span></span>
+        <div>
+          <h2>Before you ask</h2>
+          <p>Many answers are already on the <a href="help.html">Help page</a>. Makimedia is a player, not a streaming service, so we can't help find, download or share films or shows. <a href="legal.html">Read the legal notice</a>.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="tmdb">
+      <img src="assets/tmdb-logo.svg" alt="TMDB">
+      <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+    </div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="help.html">Help</a>
+      <a href="contribute.html">Contribute</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="legal.html">Legal notice</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="https://github.com/Ognjen14/Makimedia" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/Ognjen14/Makimedia/blob/main/LICENSE" target="_blank" rel="noopener">Licence</a>
+    </nav>
+    <p class="copyright">Makimedia is a video player. It doesn't provide any films or shows and isn't a streaming service; it plays files you already have. &copy; 2026 TopicDev. Free software under the GNU General Public License v2 or later.</p>
+  </div>
+</footer>
+
+<script src="contact.js?v=1"></script>
+<script src="nav.js?v=2"></script>
+</body>
+</html>

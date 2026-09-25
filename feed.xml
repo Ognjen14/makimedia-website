@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Makimedia blog</title>
+    <link>https://makimedia.org/blog.html</link>
+    <description>Release notes and news from Makimedia, the free video player for Windows, Android and Android TV.</description>
+    <language>en</language>
+    <atom:link href="https://makimedia.org/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Fri, 25 Sep 2026 12:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Hello, makimedia.org</title>
+      <link>https://makimedia.org/blog/hello-makimedia.html</link>
+      <guid isPermaLink="true">https://makimedia.org/blog/hello-makimedia.html</guid>
+      <pubDate>Fri, 25 Sep 2026 12:00:00 GMT</pubDate>
+      <category>News</category>
+      <description>Makimedia has a home on the web. What it is, why streaming at home is at its heart, and what comes next.</description>
+    </item>
+  </channel>
+</rss>

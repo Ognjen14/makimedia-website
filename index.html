@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Makimedia - your films, on every screen</title>
+  <meta name="description" content="Makimedia turns the video folders you already have into a library, on Windows, Android phones, tablets and Android TV. Free, open source, no ads, no tracking.">
+  <meta name="theme-color" content="#1F1F1F">
+  <link rel="canonical" href="https://makimedia.org/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Makimedia">
+  <meta property="og:title" content="Makimedia">
+  <meta property="og:description" content="Your films, on every screen. A free, open source video player for Windows, Android and Android TV.">
+  <meta property="og:url" content="https://makimedia.org/">
+  <meta property="og:image" content="https://makimedia.org/assets/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=28">
+</head>
+<body>
+
+<svg class="ill-defs" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="ill-accent" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" class="st-accent-hi"/>
+      <stop offset="1" class="st-accent"/>
+    </linearGradient>
+    <linearGradient id="ill-ink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" class="st-ink-hi"/>
+      <stop offset="1" class="st-ink"/>
+    </linearGradient>
+    <linearGradient id="ill-mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" class="st-mid"/>
+      <stop offset="1" class="st-mid-lo"/>
+    </linearGradient>
+    <linearGradient id="ill-paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" class="st-paper"/>
+      <stop offset="1" class="st-paper-lo"/>
+    </linearGradient>
+    <radialGradient id="ill-blob" cx="0.5" cy="0.42" r="0.62">
+      <stop offset="0" class="st-blob-hi"/>
+      <stop offset="1" class="st-blob"/>
+    </radialGradient>
+  </defs>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-68.png" width="34" height="34" alt="">
+      Makimedia
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="blog.html">Blog</a>
+      <a href="help.html">Help</a>
+      <a href="contribute.html">Contribute</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-github" href="https://github.com/Ognjen14/Makimedia" target="_blank" rel="noopener"><span class="ico i-github" aria-hidden="true"></span><span class="nav-github-label">GitHub</span></a>
+    </nav>
+    <div class="header-actions">
+      <a class="nav-cta" href="#download"><span class="ico i-download" aria-hidden="true"></span>Download</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="ico i-menu icon-open" aria-hidden="true"></span><span class="ico i-close icon-close" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="hero">
+    <div class="wrap hero-grid">
+    <div class="hero-copy">
+    <a class="hero-badge" href="https://github.com/Ognjen14/Makimedia" target="_blank" rel="noopener">
+      <span class="hero-badge-tag">Free</span>
+      <span>Open source under the GPL</span>
+      <span class="ico i-chevron-right" aria-hidden="true"></span>
+    </a>
+    <h1>Your film library,<br><span class="accent">on every screen.</span></h1>
+    <p class="lead">Makimedia turns the video folders on your PC into a library with posters, details and progress, then streams it to your Android phone, tablet and TV over your home network. They find the PC on their own, with no server to set up, and the video never leaves your home.</p>
+
+    <ul class="hero-points">
+      <li><span class="ico i-check" aria-hidden="true"></span>Stream on your Wi-Fi</li>
+      <li><span class="ico i-check" aria-hidden="true"></span>No account, no cloud</li>
+      <li><span class="ico i-check" aria-hidden="true"></span>No ads, no tracking</li>
+    </ul>
+
+    <div class="buttons">
+      <a class="btn primary" href="MICROSOFT_STORE_URL" target="_blank" rel="noopener">
+        <span class="ico i-microsoft" aria-hidden="true"></span>
+        <span><small>Get it from</small><strong>Microsoft Store</strong></span>
+      </a>
+      <a class="btn primary" href="GOOGLE_PLAY_URL" target="_blank" rel="noopener">
+        <span class="ico i-google-play" aria-hidden="true"></span>
+        <span><small>Get it on</small><strong>Google Play</strong></span>
+      </a>
+      <a class="btn" href="https://github.com/Ognjen14/Makimedia" target="_blank" rel="noopener">
+        <span class="ico i-github" aria-hidden="true"></span>
+        <span><small>Source code on</small><strong>GitHub</strong></span>
+      </a>
+    </div>
+    <p class="meta">Windows 10 and 11 &middot; Android phones and tablets &middot; Android TV</p>
+    </div>
+
+    <div class="hero-visual">
+      <svg class="art hero-art" viewBox="0 0 560 452" role="img" aria-label="A PC streaming its Makimedia library to a TV, a tablet and a phone">
+        <path class="blob" d="M120 60C190 10 380 8 460 58c80 50 90 170 40 250-50 80-190 110-300 90C90 380 20 300 30 200 38 130 70 96 120 60Z"/>
+
+        <path class="flow" d="M196 200C184 200 190 110 178 110"/>
+        <path class="flow" d="M364 200C378 200 374 128 390 128"/>
+        <path class="flow" d="M280 288V322"/>
+
+        <ellipse class="floor" cx="99" cy="176" rx="70" ry="7"/>
+        <rect class="ink" x="24" y="64" width="150" height="90" rx="6"/>
+        <rect class="mid" x="30" y="70" width="138" height="78" rx="2"/>
+        <rect class="ink" x="30" y="70" width="16" height="78" opacity="0.55"/>
+        <circle class="gold" cx="38" cy="80" r="3"/>
+        <circle class="line" cx="38" cy="92" r="2.5"/>
+        <circle class="line" cx="38" cy="102" r="2.5"/>
+        <rect class="line" x="54" y="77" width="46" height="5" rx="2.5"/>
+        <rect class="paper" x="54" y="90" width="22" height="32" rx="2"/>
+        <rect class="focus" x="78" y="87" width="28" height="38" rx="3"/>
+        <rect class="gold" x="81" y="90" width="22" height="32" rx="2"/>
+        <rect class="paper" x="108" y="90" width="22" height="32" rx="2"/>
+        <rect class="paper" x="134" y="90" width="22" height="32" rx="2"/>
+        <rect class="line" x="81" y="129" width="22" height="4" rx="2"/>
+        <path class="ink" d="M54 154l-8 16h7l8-16zM144 154l8 16h-7l-8-16z"/>
+        <text class="cap" x="99" y="196" text-anchor="middle">TV</text>
+
+        <ellipse class="floor" cx="280" cy="298" rx="96" ry="8"/>
+        <rect class="ink" x="196" y="150" width="168" height="110" rx="8"/>
+        <rect class="mid" x="203" y="157" width="154" height="90" rx="3"/>
+        <rect class="ink" x="203" y="157" width="30" height="90" opacity="0.55"/>
+        <rect class="gold" x="208" y="165" width="20" height="6" rx="3"/>
+        <rect class="line" x="208" y="178" width="16" height="3" rx="1.5"/>
+        <rect class="line" x="208" y="186" width="16" height="3" rx="1.5"/>
+        <rect class="line" x="208" y="194" width="16" height="3" rx="1.5"/>
+        <rect class="line" x="240" y="164" width="40" height="5" rx="2.5"/>
+        <rect class="paper" x="240" y="176" width="24" height="36" rx="2"/>
+        <rect class="gold-hi" x="268" y="176" width="24" height="36" rx="2"/>
+        <rect class="paper" x="296" y="176" width="24" height="36" rx="2"/>
+        <rect class="paper" x="324" y="176" width="26" height="36" rx="2"/>
+        <rect class="line" x="240" y="220" width="60" height="4" rx="2"/>
+        <rect class="line" x="240" y="228" width="40" height="4" rx="2"/>
+        <rect class="ink" x="268" y="260" width="24" height="18"/>
+        <rect class="ink" x="240" y="276" width="80" height="8" rx="4"/>
+        <rect class="ink" x="222" y="116" width="116" height="26" rx="13"/>
+        <circle class="pulse-ring" cx="239" cy="129" r="5"/>
+        <circle class="gold" cx="239" cy="129" r="5"/>
+        <text class="chip-text" x="252" y="133.5">Streaming</text>
+
+        <ellipse class="floor" cx="464" cy="192" rx="66" ry="6"/>
+        <rect class="ink" x="392" y="76" width="144" height="100" rx="8"/>
+        <rect class="mid" x="399" y="83" width="130" height="86" rx="3"/>
+        <rect class="ink" x="399" y="83" width="26" height="86" opacity="0.55"/>
+        <rect class="gold" x="403" y="90" width="18" height="5" rx="2.5"/>
+        <rect class="line" x="432" y="90" width="36" height="4" rx="2"/>
+        <rect class="paper" x="432" y="100" width="20" height="30" rx="2"/>
+        <rect class="paper" x="456" y="100" width="20" height="30" rx="2"/>
+        <rect class="gold-hi" x="480" y="100" width="20" height="30" rx="2"/>
+        <rect class="paper" x="504" y="100" width="20" height="30" rx="2"/>
+        <rect class="paper-soft" x="432" y="138" width="46" height="20" rx="2"/>
+        <rect class="gold" x="432" y="161" width="28" height="3" rx="1.5"/>
+        <text class="cap" x="464" y="212" text-anchor="middle">Tablet</text>
+
+        <ellipse class="floor" cx="280" cy="428" rx="34" ry="5"/>
+        <rect class="ink" x="256" y="326" width="48" height="96" rx="9"/>
+        <rect class="mid" x="261" y="334" width="38" height="80" rx="4"/>
+        <rect class="gold" x="268" y="342" width="24" height="34" rx="2"/>
+        <rect class="line" x="268" y="382" width="24" height="4" rx="2"/>
+        <rect class="line" x="268" y="390" width="16" height="4" rx="2"/>
+        <rect class="track" x="268" y="402" width="24" height="3" rx="1.5"/>
+        <rect class="gold" x="268" y="402" width="14" height="3" rx="1.5"/>
+        <text class="cap" x="330" y="378">Phone</text>
+
+        <circle class="gold" cx="178" cy="110" r="4"/>
+        <circle class="gold" cx="390" cy="128" r="4"/>
+        <circle class="gold" cx="280" cy="322" r="4"/>
+
+        <path class="spark" d="M64 22l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+        <path class="spark" d="M516 34l1.4 3.6 3.6 1.4-3.6 1.4-1.4 3.6-1.4-3.6-3.6-1.4 3.6-1.4z"/>
+        <path class="spark" d="M492 290l2.4 6 6 2.4-6 2.4-2.4 6-2.4-6-6-2.4 6-2.4z"/>
+        <path class="spark" d="M84 292l1.4 3.6 3.6 1.4-3.6 1.4-1.4 3.6-1.4-3.6-3.6-1.4 3.6-1.4z"/>
+        <circle class="gold" cx="150" cy="252" r="4"/>
+        <circle class="mid" cx="428" cy="262" r="5"/>
+      </svg>
+    </div>
+    </div>
+  </div>
+
+  <div class="wrap screenshots" id="screenshots">
+
+    <div class="section-head centered">
+      <h2>One library, every screen</h2>
+      <p>The same films, shows and progress on your PC, tablet and TV. Pick a device and take a look around.</p>
+    </div>
+
+    <div class="gallery desktop">
+      <h3>Windows</h3>
+      <div class="strip">
+        <figure class="shot">
+          <div class="frame"><img src="assets/windows/home.webp" alt="Makimedia Home on Windows, with Continue watching, Recently added and Action rows"></div>
+          <figcaption>Home</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/windows/movies.webp" alt="The Movies page, a grid of posters with genre filters" loading="lazy"></div>
+          <figcaption>Movies</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/windows/tv-shows.webp" alt="The TV shows page, a grid of show posters" loading="lazy"></div>
+          <figcaption>TV shows</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/windows/search.webp" alt="Searching the library for spider-man, with ten films and two collections found" loading="lazy"></div>
+          <figcaption>Search</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/windows/film-details.webp?v=3" alt="Film details for F1, resuming at 1:57:01, with cast and crew" loading="lazy"></div>
+          <figcaption>Film details</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/windows/show-details.webp?v=3" alt="The Haunting of Hill House show page, with cast, seasons and episodes" loading="lazy"></div>
+          <figcaption>Show details</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/windows/episode-details.webp" alt="A Breaking Bad episode page, with the next episode ready below" loading="lazy"></div>
+          <figcaption>Episode details</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/windows/collections.webp" alt="The Collections page, with film series shown as stacked posters" loading="lazy"></div>
+          <figcaption>Collections</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/windows/collection.webp" alt="The Spider-Man universe, nine films grouped by era in story order" loading="lazy"></div>
+          <figcaption>Spider-Man in story order</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/windows/stream-to-devices.webp" alt="Stream to devices, ready to share this library with a TV, a tablet and a phone" loading="lazy"></div>
+          <figcaption>Stream to devices</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/windows/streaming.webp" alt="The PC streaming American Gangster to a tablet, with its progress" loading="lazy"></div>
+          <figcaption>Streaming to a tablet</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/windows/settings.webp" alt="Settings for the library, playback and the app" loading="lazy"></div>
+          <figcaption>Settings</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/windows/appearance-accent.webp" alt="Appearance settings with a red accent colour and text size" loading="lazy"></div>
+          <figcaption>Choose an accent colour</figcaption>
+        </figure>      </div>
+    </div>
+
+    <div class="gallery tablet">
+      <h3>Tablet</h3>
+      <div class="strip">
+        <figure class="shot">
+          <div class="frame"><img src="assets/tablet/connect.webp" alt="Home on a tablet offering to connect to a Makimedia server that is streaming" loading="lazy"></div>
+          <figcaption>Finds your PC on its own</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tablet/home.webp?v=2" alt="Home on a tablet, streaming the PC's library with continue watching and recently added" loading="lazy"></div>
+          <figcaption>Your PC's library, on the tablet</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tablet/movies.webp" alt="The Movies page on a tablet, filtered to adventure films" loading="lazy"></div>
+          <figcaption>Movies</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tablet/tv-shows.webp" alt="The TV shows page on a tablet" loading="lazy"></div>
+          <figcaption>TV shows</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tablet/film-details.webp?v=2" alt="Film details for F1 on a tablet, with cast and crew" loading="lazy"></div>
+          <figcaption>Film details</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tablet/show-details.webp?v=2" alt="Breaking Bad show page on a tablet, with cast and crew" loading="lazy"></div>
+          <figcaption>Show details</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tablet/episode-details.webp?v=2" alt="A Breaking Bad episode page, with the next episode ready below" loading="lazy"></div>
+          <figcaption>Episode details</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tablet/collections.webp?v=2" alt="The Collections page on a tablet" loading="lazy"></div>
+          <figcaption>Collections</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tablet/collection.webp?v=2" alt="The Man with No Name trilogy, its three films in order" loading="lazy"></div>
+          <figcaption>A trilogy, in order</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tablet/search.webp?v=2" alt="Searching for Batman on a tablet" loading="lazy"></div>
+          <figcaption>Search</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tablet/settings.webp?v=2" alt="Settings on a tablet" loading="lazy"></div>
+          <figcaption>Settings</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tablet/appearance.webp" alt="Appearance settings with a blue accent colour" loading="lazy"></div>
+          <figcaption>Choose an accent colour</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="gallery phone">
+      <h3>Phone</h3>
+      <div class="strip">
+        <figure class="shot">
+          <div class="frame">Screenshot: phone 1</div>
+          <figcaption>Home</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame">Screenshot: phone 2</div>
+          <figcaption>Film details</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame">Screenshot: phone 3</div>
+          <figcaption>Collections</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame">Screenshot: phone 4</div>
+          <figcaption>Player</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="gallery tv">
+      <h3>Android TV</h3>
+      <div class="strip">
+        <figure class="shot">
+          <div class="frame"><img src="assets/tv/home.webp" alt="Makimedia Home on Android TV, streaming from a PC" loading="lazy"></div>
+          <figcaption>Home</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tv/movies.webp" alt="The Movies page on a TV, with genre filters" loading="lazy"></div>
+          <figcaption>Movies</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tv/tv-shows.webp" alt="The TV shows page on a TV" loading="lazy"></div>
+          <figcaption>TV shows</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tv/film-details.webp" alt="Film details for F1 on a TV, with cast and crew" loading="lazy"></div>
+          <figcaption>Film details</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tv/show-details.webp" alt="Better Call Saul on a TV, with seasons and episodes" loading="lazy"></div>
+          <figcaption>Show details</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tv/episode-details.webp" alt="An episode page on a TV, with the resume point and the next episode" loading="lazy"></div>
+          <figcaption>Episode details</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tv/collections.webp" alt="The Collections page on a TV" loading="lazy"></div>
+          <figcaption>Collections</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tv/collection.webp" alt="The Middle-earth universe on a TV, with release and story order" loading="lazy"></div>
+          <figcaption>Middle-earth, in order</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/tv/settings.webp" alt="Settings on a TV" loading="lazy"></div>
+          <figcaption>Settings</figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </div>
+
+  <section id="features" class="alt">
+    <div class="wrap">
+      <div class="section-head centered">
+        <h2>A library made from your own files</h2>
+        <p>Point Makimedia at your folders. It finds the films and shows, fetches their posters, and remembers where you stopped.</p>
+      </div>
+      <div class="features">
+
+        <article class="feature">
+          <svg class="art" viewBox="0 0 240 180" aria-hidden="true">
+            <path class="blob" d="M58 32C92 6 168 10 200 40c30 28 26 90-8 116-34 24-112 22-146-4C12 128 22 60 58 32Z"/>
+            <ellipse class="floor" cx="120" cy="160" rx="78" ry="7"/>
+            <path class="mid" d="M42 62a8 8 0 0 1 8-8h38l10 10h92a8 8 0 0 1 8 8v78a8 8 0 0 1-8 8H50a8 8 0 0 1-8-8Z"/>
+            <g transform="rotate(-10 88 70)">
+              <rect class="paper" x="62" y="34" width="52" height="70" rx="6"/>
+              <rect class="line" x="71" y="47" width="34" height="4" rx="2"/>
+              <rect class="line" x="71" y="56" width="26" height="4" rx="2"/>
+              <rect class="line" x="71" y="65" width="31" height="4" rx="2"/>
+              <rect class="line" x="71" y="74" width="20" height="4" rx="2"/>
+            </g>
+            <g transform="rotate(8 146 64)">
+              <rect class="ink" x="114" y="36" width="64" height="56" rx="6"/>
+              <rect class="hole" x="120" y="40" width="5" height="4" rx="1"/>
+              <rect class="hole" x="130" y="40" width="5" height="4" rx="1"/>
+              <rect class="hole" x="140" y="40" width="5" height="4" rx="1"/>
+              <rect class="hole" x="150" y="40" width="5" height="4" rx="1"/>
+              <rect class="hole" x="160" y="40" width="5" height="4" rx="1"/>
+              <rect class="hole" x="170" y="40" width="5" height="4" rx="1"/>
+              <rect class="hole" x="120" y="84" width="5" height="4" rx="1"/>
+              <rect class="hole" x="130" y="84" width="5" height="4" rx="1"/>
+              <rect class="hole" x="140" y="84" width="5" height="4" rx="1"/>
+              <rect class="hole" x="150" y="84" width="5" height="4" rx="1"/>
+              <rect class="hole" x="160" y="84" width="5" height="4" rx="1"/>
+              <rect class="hole" x="170" y="84" width="5" height="4" rx="1"/>
+              <rect class="mid" x="120" y="48" width="52" height="32" rx="2"/>
+              <circle class="paper" cx="162" cy="56" r="4"/>
+              <path class="gold" d="M120 80l14-14 10 8 12-12 16 18Z"/>
+            </g>
+            <path class="gold" d="M44 76h152a8 8 0 0 1 8 9l-6 58a10 10 0 0 1-10 9H52a10 10 0 0 1-10-9l-6-58a8 8 0 0 1 8-9Z"/>
+            <rect class="shine" x="46" y="80" width="148" height="4" rx="2"/>
+            <rect class="paper-soft" x="98" y="108" width="44" height="8" rx="4"/>
+            <path class="spark" d="M200 31l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+            <path class="spark" d="M38 44l1.2 2.8 2.8 1.2-2.8 1.2-1.2 2.8-1.2-2.8-2.8-1.2 2.8-1.2z"/>
+            <circle class="gold" cx="212" cy="72" r="3"/>
+            <circle class="mid" cx="28" cy="118" r="4"/>
+          </svg>
+          <h3>Your files come first</h3>
+          <p>The library is built from your folders and works with the network off. A file that can't be identified still plays and still shows up.</p>
+        </article>
+
+        <article class="feature">
+          <svg class="art" viewBox="0 0 240 180" aria-hidden="true">
+            <path class="blob" d="M182 28c-34-24-104-22-138 6C12 60 16 124 50 150c34 26 108 24 140-4 32-28 26-94-8-118Z"/>
+            <ellipse class="floor" cx="120" cy="162" rx="74" ry="7"/>
+            <g transform="rotate(-14 84 98)">
+              <rect class="mid" x="54" y="52" width="60" height="90" rx="7"/>
+              <circle class="paper-soft" cx="84" cy="84" r="13"/>
+              <rect class="line" x="63" y="122" width="42" height="4" rx="2"/>
+              <rect class="line" x="63" y="130" width="28" height="4" rx="2"/>
+            </g>
+            <g transform="rotate(14 156 98)">
+              <rect class="mid" x="126" y="52" width="60" height="90" rx="7"/>
+              <path class="gold-hi" d="M126 104l60-28v14l-60 28Z"/>
+              <rect class="line" x="135" y="122" width="42" height="4" rx="2"/>
+              <rect class="line" x="135" y="130" width="28" height="4" rx="2"/>
+            </g>
+            <rect class="ink" x="88" y="36" width="64" height="100" rx="8"/>
+            <rect class="mid" x="94" y="42" width="52" height="62" rx="4"/>
+            <circle class="gold" cx="132" cy="58" r="8"/>
+            <path class="paper" d="M94 104l18-22 12 12 10-10 12 20Z"/>
+            <rect class="paper" x="96" y="112" width="40" height="5" rx="2.5"/>
+            <rect class="line" x="96" y="121" width="26" height="4" rx="2"/>
+            <rect class="gold" x="134" y="120" width="64" height="26" rx="13"/>
+            <path class="ink" d="M149 126.5l2 4.3 4.7.6-3.4 3.3.8 4.7-4.1-2.2-4.1 2.2.8-4.7-3.4-3.3 4.7-.6Z"/>
+            <text class="label-ink" x="176" y="137.5" text-anchor="middle">8.4</text>
+            <circle class="avatar" cx="62" cy="146" r="11"/>
+            <circle class="paper" cx="62" cy="142.5" r="3.8"/>
+            <path class="paper" d="M55.5 153.5a6.5 5.5 0 0 1 13 0Z"/>
+            <circle class="avatar" cx="80" cy="146" r="11"/>
+            <circle class="paper" cx="80" cy="142.5" r="3.8"/>
+            <path class="paper" d="M73.5 153.5a6.5 5.5 0 0 1 13 0Z"/>
+            <circle class="avatar" cx="98" cy="146" r="11"/>
+            <circle class="paper" cx="98" cy="142.5" r="3.8"/>
+            <path class="paper" d="M91.5 153.5a6.5 5.5 0 0 1 13 0Z"/>
+            <path class="spark" d="M58 29l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+            <path class="spark" d="M200 44l1.2 2.8 2.8 1.2-2.8 1.2-1.2 2.8-1.2-2.8-2.8-1.2 2.8-1.2z"/>
+            <circle class="gold" cx="206" cy="98" r="3"/>
+          </svg>
+          <h3>Posters and details</h3>
+          <p>Films and shows are matched from their file names, with artwork, cast and episode lists. If a guess isn't sure, Makimedia asks you before using it, and you can always fix a match.</p>
+        </article>
+
+        <article class="feature">
+          <svg class="art" viewBox="0 0 240 180" aria-hidden="true">
+            <path class="blob" d="M58 32C92 6 168 10 200 40c30 28 26 90-8 116-34 24-112 22-146-4C12 128 22 60 58 32Z"/>
+            <ellipse class="floor" cx="116" cy="160" rx="70" ry="7"/>
+            <rect class="ink" x="36" y="36" width="160" height="102" rx="10"/>
+            <rect class="mid" x="44" y="44" width="144" height="78" rx="4"/>
+            <circle class="paper" cx="160" cy="62" r="9"/>
+            <path class="gold-hi" d="M44 110l26-24 18 12 22-24 28 24 18-10 32 22v12H44Z"/>
+            <path class="gold" d="M44 122v-10q36-16 72-2t72-4v16Z"/>
+            <rect class="paper" x="54" y="54" width="60" height="18" rx="9"/>
+            <path class="ink" d="M63 58.5v9l7-4.5Z"/>
+            <rect class="ink-soft" x="75" y="61" width="30" height="4" rx="2"/>
+            <rect class="track" x="52" y="127" width="128" height="5" rx="2.5"/>
+            <rect class="gold" x="52" y="127" width="86" height="5" rx="2.5"/>
+            <circle class="knob" cx="138" cy="129.5" r="5"/>
+            <rect class="ink" x="106" y="138" width="20" height="10"/>
+            <rect class="ink" x="84" y="146" width="64" height="7" rx="3.5"/>
+            <circle class="gold" cx="198" cy="40" r="23"/>
+            <circle class="paper" cx="198" cy="40" r="16"/>
+            <path class="tick" d="M198 27v3M198 50v3M185 40h3M208 40h3"/>
+            <path class="hand" d="M198 33v7l5 4"/>
+            <path class="spark" d="M30 38l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+            <circle class="mid" cx="214" cy="112" r="4"/>
+            <circle class="gold" cx="24" cy="96" r="3"/>
+          </svg>
+          <h3>Continue watching</h3>
+          <p>Every film and episode resumes where you left it, and what you're partway through waits at the top of Home.</p>
+        </article>
+
+        <article class="feature">
+          <svg class="art" viewBox="0 0 240 180" aria-hidden="true">
+            <path class="blob" d="M182 28c-34-24-104-22-138 6C12 60 16 124 50 150c34 26 108 24 140-4 32-28 26-94-8-118Z"/>
+            <ellipse class="floor" cx="116" cy="160" rx="72" ry="7"/>
+            <rect class="mid" x="92" y="30" width="74" height="106" rx="8" transform="rotate(16 129 83)"/>
+            <rect class="paper" x="86" y="32" width="74" height="106" rx="8" transform="rotate(9 123 85)"/>
+            <rect class="ink" x="80" y="34" width="74" height="106" rx="8" transform="rotate(3 117 87)"/>
+            <rect class="gold" x="64" y="38" width="74" height="108" rx="8"/>
+            <circle class="shine" cx="101" cy="80" r="20"/>
+            <path class="ink-soft" d="M64 120l20-20 14 12 16-18 24 26v10H64Z"/>
+            <rect class="ink" x="72" y="46" width="32" height="17" rx="8.5"/>
+            <text class="label" x="88" y="58.5" text-anchor="middle">3/5</text>
+            <rect class="ink" x="72" y="134" width="46" height="5" rx="2.5"/>
+            <rect class="paper" x="148" y="90" width="70" height="60" rx="9"/>
+            <circle class="gold" cx="160" cy="104" r="5"/>
+            <rect class="ink-soft" x="170" y="102" width="38" height="4" rx="2"/>
+            <circle class="gold" cx="160" cy="120" r="5"/>
+            <rect class="ink-soft" x="170" y="118" width="30" height="4" rx="2"/>
+            <circle class="gold-hi" cx="160" cy="136" r="5"/>
+            <rect class="ink-soft" x="170" y="134" width="34" height="4" rx="2"/>
+            <path class="spark" d="M190 30l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+            <path class="spark" d="M44 56l1.2 2.8 2.8 1.2-2.8 1.2-1.2 2.8-1.2-2.8-2.8-1.2 2.8-1.2z"/>
+            <circle class="gold" cx="38" cy="124" r="3"/>
+          </svg>
+          <h3>Collections and universes</h3>
+          <p>Sagas are grouped for you, from Marvel and DC to Spider-Man and Batman, in story order where it matters. You can make your own collections too.</p>
+        </article>
+
+        <article class="feature">
+          <svg class="art" viewBox="0 0 240 180" aria-hidden="true">
+            <path class="blob" d="M58 32C92 6 168 10 200 40c30 28 26 90-8 116-34 24-112 22-146-4C12 128 22 60 58 32Z"/>
+            <ellipse class="floor" cx="122" cy="160" rx="92" ry="7"/>
+            <path class="link" d="M132 74c16-14 24-20 34-20"/>
+            <path class="link" d="M132 92c18 14 32 22 48 24"/>
+            <rect class="ink" x="18" y="46" width="112" height="76" rx="8"/>
+            <rect class="mid" x="25" y="53" width="98" height="58" rx="3"/>
+            <rect class="paper" x="33" y="61" width="14" height="20" rx="2"/>
+            <rect class="paper" x="51" y="61" width="14" height="20" rx="2"/>
+            <rect class="gold-hi" x="69" y="61" width="14" height="20" rx="2"/>
+            <rect class="line" x="33" y="88" width="42" height="4" rx="2"/>
+            <rect class="line" x="33" y="96" width="28" height="4" rx="2"/>
+            <circle class="gold" cx="103" cy="82" r="12"/>
+            <path class="ink" d="M99 76v12l10-6Z"/>
+            <rect class="ink" x="65" y="122" width="18" height="12"/>
+            <rect class="ink" x="48" y="132" width="52" height="7" rx="3.5"/>
+            <circle class="gold" cx="140" cy="38" r="14"/>
+            <path class="hand" d="M133 38a10 10 0 0 1 14 0M136.5 42a5 5 0 0 1 7 0"/>
+            <circle class="ink" cx="140" cy="46" r="1.8"/>
+            <rect class="ink" x="166" y="30" width="64" height="48" rx="6"/>
+            <rect class="mid" x="171" y="35" width="54" height="38" rx="3"/>
+            <rect class="paper" x="176" y="40" width="10" height="15" rx="1.5"/>
+            <rect class="gold-hi" x="190" y="40" width="10" height="15" rx="1.5"/>
+            <rect class="paper" x="204" y="40" width="10" height="15" rx="1.5"/>
+            <rect class="track" x="176" y="63" width="44" height="3" rx="1.5"/>
+            <rect class="gold" x="176" y="63" width="26" height="3" rx="1.5"/>
+            <rect class="ink" x="182" y="90" width="36" height="64" rx="7"/>
+            <rect class="mid" x="186" y="96" width="28" height="52" rx="3"/>
+            <circle class="gold" cx="200" cy="116" r="8"/>
+            <path class="ink" d="M197.5 112v8l6-4Z"/>
+            <rect class="track" x="190" y="138" width="20" height="3" rx="1.5"/>
+            <rect class="gold" x="190" y="138" width="12" height="3" rx="1.5"/>
+            <path class="spark" d="M46 26l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+            <circle class="gold" cx="232" cy="100" r="3"/>
+          </svg>
+          <h3>Stream from your PC</h3>
+          <p>Turn on streaming on Windows and your phone, tablet or TV finds it on your home network. Watch the PC's whole library with no setup and no addresses to type.</p>
+        </article>
+
+        <article class="feature">
+          <svg class="art" viewBox="0 0 240 180" aria-hidden="true">
+            <path class="blob" d="M182 28c-34-24-104-22-138 6C12 60 16 124 50 150c34 26 108 24 140-4 32-28 26-94-8-118Z"/>
+            <ellipse class="floor" cx="122" cy="170" rx="62" ry="6"/>
+            <rect class="gold-hi" x="26" y="78" width="6" height="16" rx="3"/>
+            <rect class="gold-hi" x="36" y="66" width="6" height="40" rx="3"/>
+            <rect class="gold-hi" x="46" y="72" width="6" height="28" rx="3"/>
+            <rect class="gold-hi" x="56" y="62" width="6" height="48" rx="3"/>
+            <rect class="gold-hi" x="66" y="76" width="6" height="20" rx="3"/>
+            <circle class="gold" cx="124" cy="84" r="44"/>
+            <circle class="shine" cx="124" cy="84" r="31"/>
+            <circle class="ring" cx="124" cy="84" r="37"/>
+            <path class="ink" d="M112 64v40l34-20Z"/>
+            <rect class="ink" x="20" y="28" width="46" height="20" rx="10"/>
+            <text class="label" x="43" y="42" text-anchor="middle">MP4</text>
+            <rect class="ink" x="176" y="36" width="44" height="20" rx="10"/>
+            <text class="label" x="198" y="50" text-anchor="middle">4K</text>
+            <rect class="ink" x="180" y="62" width="52" height="20" rx="10"/>
+            <text class="label" x="206" y="76" text-anchor="middle">HEVC</text>
+            <rect class="ink" x="176" y="88" width="46" height="20" rx="10"/>
+            <text class="label" x="199" y="102" text-anchor="middle">MKV</text>
+            <rect class="gold" x="44" y="139" width="22" height="16" rx="3"/>
+            <text class="label-ink small" x="55" y="150.5" text-anchor="middle">CC</text>
+            <rect class="paper" x="72" y="139" width="108" height="9" rx="4.5"/>
+            <rect class="paper" x="92" y="152" width="68" height="9" rx="4.5"/>
+            <path class="spark" d="M206 124l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/>
+            <path class="spark" d="M150 22l1.2 2.8 2.8 1.2-2.8 1.2-1.2 2.8-1.2-2.8-2.8-1.2 2.8-1.2z"/>
+          </svg>
+          <h3>Plays almost anything</h3>
+          <p>Built on mpv, with hardware decoding up to 4K HEVC. Choose audio and subtitle tracks, adjust their timing, or find subtitles on OpenSubtitles.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="devices" class="devices">
+    <div class="wrap">
+      <div class="section-head centered">
+        <h2>Made for each screen</h2>
+        <p>A mouse, a touchscreen and a TV remote each get their own controls. Nothing is squeezed to fit.</p>
+      </div>
+      <div class="device-grid">
+
+        <article class="device">
+          <div class="device-art">
+            <svg class="art" viewBox="0 0 320 200" aria-hidden="true">
+              <rect class="ink" x="62" y="22" width="176" height="112" rx="9"/>
+              <rect class="mid" x="69" y="29" width="162" height="92" rx="4"/>
+              <rect class="ink" x="69" y="29" width="30" height="92" rx="4" opacity="0.55"/>
+              <rect class="gold" x="74" y="38" width="20" height="6" rx="3"/>
+              <rect class="paper" x="106" y="38" width="36" height="52" rx="4"/>
+              <rect class="gold" x="148" y="38" width="36" height="52" rx="4"/>
+              <rect class="paper" x="190" y="38" width="34" height="52" rx="4"/>
+              <rect class="line" x="106" y="98" width="70" height="5" rx="2.5"/>
+              <rect class="line" x="106" y="108" width="44" height="5" rx="2.5"/>
+              <rect class="ink" x="140" y="134" width="20" height="14" rx="2"/>
+              <rect class="ink" x="118" y="146" width="64" height="7" rx="3.5"/>
+              <rect class="ink" x="38" y="162" width="190" height="30" rx="7"/>
+              <rect class="key" x="46" y="168" width="14" height="8" rx="2"/>
+              <rect class="key" x="64" y="168" width="14" height="8" rx="2"/>
+              <rect class="key" x="82" y="168" width="14" height="8" rx="2"/>
+              <rect class="key" x="100" y="168" width="14" height="8" rx="2"/>
+              <rect class="key" x="118" y="168" width="14" height="8" rx="2"/>
+              <rect class="key" x="136" y="168" width="14" height="8" rx="2"/>
+              <rect class="key" x="154" y="168" width="14" height="8" rx="2"/>
+              <rect class="key" x="172" y="168" width="14" height="8" rx="2"/>
+              <rect class="key" x="190" y="168" width="14" height="8" rx="2"/>
+              <rect class="key" x="208" y="168" width="14" height="8" rx="2"/>
+              <rect class="key" x="46" y="180" width="32" height="8" rx="2"/>
+              <rect class="gold" x="82" y="180" width="104" height="8" rx="2"/>
+              <rect class="key" x="190" y="180" width="32" height="8" rx="2"/>
+              <rect class="ink" x="246" y="148" width="36" height="48" rx="18"/>
+              <rect class="gold" x="261" y="156" width="6" height="12" rx="3"/>
+              <path class="wave" d="M292 150a12 12 0 0 1 0 16M300 144a22 22 0 0 1 0 28"/>
+            </svg>
+          </div>
+          <div class="device-body">
+            <p class="input-tag">Mouse and keyboard</p>
+            <h3>Windows</h3>
+            <ul class="ticks">
+              <li><span class="ico i-check" aria-hidden="true"></span>Double-click for fullscreen, mouse wheel for volume</li>
+              <li><span class="ico i-check" aria-hidden="true"></span>VLC-style keyboard shortcuts and media keys</li>
+              <li><span class="ico i-check" aria-hidden="true"></span>An always-on-top mini player</li>
+              <li><span class="ico i-check" aria-hidden="true"></span>Opens videos straight from File Explorer</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="device">
+          <div class="device-art">
+            <svg class="art" viewBox="0 0 320 200" aria-hidden="true">
+              <rect class="ink" x="30" y="36" width="170" height="124" rx="12"/>
+              <rect class="mid" x="39" y="45" width="152" height="106" rx="5"/>
+              <rect class="paper" x="48" y="56" width="30" height="44" rx="3"/>
+              <rect class="gold" x="84" y="56" width="30" height="44" rx="3"/>
+              <rect class="paper" x="120" y="56" width="30" height="44" rx="3"/>
+              <rect class="paper" x="156" y="56" width="26" height="44" rx="3"/>
+              <rect class="line" x="48" y="108" width="60" height="5" rx="2.5"/>
+              <rect class="paper" x="48" y="122" width="30" height="20" rx="3"/>
+              <rect class="paper" x="84" y="122" width="30" height="20" rx="3"/>
+              <rect class="paper" x="120" y="122" width="30" height="20" rx="3"/>
+              <rect class="ink" x="206" y="26" width="84" height="160" rx="14"/>
+              <rect class="mid" x="213" y="36" width="70" height="140" rx="7"/>
+              <circle class="ripple" cx="262" cy="98" r="10"/>
+              <circle class="ripple faint" cx="262" cy="98" r="20"/>
+              <circle class="gold" cx="262" cy="98" r="4"/>
+              <path class="ink" d="M228 90l9 8-9 8zM238 90l9 8-9 8z" opacity="0.6"/>
+              <rect class="line" x="221" y="160" width="54" height="4" rx="2"/>
+              <rect class="gold" x="221" y="160" width="30" height="4" rx="2"/>
+              <circle class="gold" cx="226" cy="48" r="11"/>
+              <rect class="ink" x="221" y="47" width="10" height="7" rx="1.5"/>
+              <path class="hand" d="M223 47v-3a3 3 0 0 1 6 0v3"/>
+            </svg>
+          </div>
+          <div class="device-body">
+            <p class="input-tag">Touch</p>
+            <h3>Phone and tablet</h3>
+            <ul class="ticks">
+              <li><span class="ico i-check" aria-hidden="true"></span>Double-tap to skip, swipe for volume and brightness</li>
+              <li><span class="ico i-check" aria-hidden="true"></span>A lock button that stops pocket taps</li>
+              <li><span class="ico i-check" aria-hidden="true"></span>Plays from internal storage, SD cards and USB drives</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="device">
+          <div class="device-art">
+            <svg class="art" viewBox="0 0 320 200" aria-hidden="true">
+              <rect class="ink" x="24" y="20" width="220" height="130" rx="9"/>
+              <rect class="mid" x="31" y="27" width="206" height="116" rx="4"/>
+              <rect class="ink" x="31" y="27" width="22" height="116" rx="4" opacity="0.55"/>
+              <circle class="gold" cx="42" cy="42" r="5"/>
+              <circle class="line" cx="42" cy="60" r="4"/>
+              <circle class="line" cx="42" cy="75" r="4"/>
+              <rect class="line" x="64" y="38" width="70" height="7" rx="3.5"/>
+              <rect class="paper" x="64" y="54" width="36" height="54" rx="4"/>
+              <rect class="focus" x="106" y="50" width="44" height="62" rx="6"/>
+              <rect class="gold" x="110" y="54" width="36" height="54" rx="4"/>
+              <rect class="paper" x="156" y="54" width="36" height="54" rx="4"/>
+              <rect class="paper" x="198" y="54" width="36" height="54" rx="4"/>
+              <rect class="line" x="110" y="116" width="36" height="5" rx="2.5"/>
+              <path class="ink" d="M80 150l-10 20h8l8-20zM188 150l10 20h-8l-8-20z"/>
+              <g transform="rotate(14 276 126)">
+                <rect class="ink" x="256" y="62" width="40" height="124" rx="20"/>
+                <circle class="mid" cx="276" cy="94" r="15"/>
+                <circle class="gold" cx="276" cy="94" r="6"/>
+                <path class="key" d="M276 81l-4 5h8zM276 107l-4-5h8zM263 94l5-4v8zM289 94l-5-4v8z"/>
+                <circle class="key" cx="268" cy="126" r="5"/>
+                <circle class="key" cx="284" cy="126" r="5"/>
+                <rect class="key" x="268" y="142" width="16" height="6" rx="3"/>
+              </g>
+            </svg>
+          </div>
+          <div class="device-body">
+            <p class="input-tag">The remote</p>
+            <h3>Android TV</h3>
+            <ul class="ticks">
+              <li><span class="ico i-check" aria-hidden="true"></span>Every screen works with the remote alone</li>
+              <li><span class="ico i-check" aria-hidden="true"></span>Hold left or right to scrub at a steady pace</li>
+              <li><span class="ico i-check" aria-hidden="true"></span>Hardware decoding for 4K on TV boxes</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="promise">
+        <div class="promise-text">
+          <p class="hero-badge is-static"><span class="hero-badge-tag">Free</span><span>and open source</span></p>
+          <h2>Free, and it stays that way</h2>
+          <p>Makimedia is open source under the GNU GPL. There is no account to create, nothing to subscribe to, and nothing watching what you watch. Your library and your progress stay on your own devices.</p>
+          <div class="promise-actions">
+            <a class="btn primary" href="https://github.com/Ognjen14/Makimedia" target="_blank" rel="noopener">
+              <span class="ico i-github" aria-hidden="true"></span>
+              <span><small>Read the source on</small><strong>GitHub</strong></span>
+            </a>
+            <a class="text-link" href="privacy.html">Privacy policy</a>
+          </div>
+        </div>
+        <ul class="promises">
+          <li>
+            <span class="promise-icon"><span class="ico i-no-ads" aria-hidden="true"></span></span>
+            <span><strong>No ads</strong><small>Nothing between you and the film.</small></span>
+          </li>
+          <li>
+            <span class="promise-icon"><span class="ico i-no-subscription" aria-hidden="true"></span></span>
+            <span><strong>No subscription</strong><small>Free today, free next year.</small></span>
+          </li>
+          <li>
+            <span class="promise-icon"><span class="ico i-no-tracking" aria-hidden="true"></span></span>
+            <span><strong>No tracking</strong><small>No analytics, no telemetry, ever.</small></span>
+          </li>
+          <li>
+            <span class="promise-icon"><span class="ico i-no-account" aria-hidden="true"></span></span>
+            <span><strong>No account</strong><small>Install it and press play.</small></span>
+          </li>
+          <li>
+            <span class="promise-icon"><span class="ico i-offline" aria-hidden="true"></span></span>
+            <span><strong>Works offline</strong><small>Your library needs no internet.</small></span>
+          </li>
+          <li>
+            <span class="promise-icon"><span class="ico i-open-source" aria-hidden="true"></span></span>
+            <span><strong>Open source</strong><small>GPL, for anyone to read and build.</small></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="not-a-service" class="not-service">
+    <div class="wrap">
+      <div class="section-head centered">
+        <h2>A player, not a streaming service</h2>
+        <p>Makimedia plays video files you already have. It has no catalogue of its own, and it doesn't sell, rent, host or stream any films or shows.</p>
+      </div>
+      <div class="is-isnt">
+        <div>
+          <h3>What Makimedia does</h3>
+          <ul class="ticks">
+            <li><span class="ico i-check" aria-hidden="true"></span>Plays video files stored on your own PC, phone, tablet or drives</li>
+            <li><span class="ico i-check" aria-hidden="true"></span>Streams them only between your own devices, on your own home network</li>
+            <li><span class="ico i-check" aria-hidden="true"></span>Automatically fetches posters and metadata from TMDB for your files</li>
+          </ul>
+        </div>
+        <div>
+          <h3>What Makimedia doesn't do</h3>
+          <ul class="ticks crosses">
+            <li><span class="ico i-cross" aria-hidden="true"></span>Provide, sell or rent any films or shows</li>
+            <li><span class="ico i-cross" aria-hidden="true"></span>Host video or stream anything over the internet</li>
+            <li><span class="ico i-cross" aria-hidden="true"></span>Find, download or share videos for you</li>
+            <li><span class="ico i-cross" aria-hidden="true"></span>Connect to Netflix, Prime Video, Disney+ or any other streaming service</li>
+          </ul>
+        </div>
+      </div>
+      <p class="fine-print">Only play and stream videos you have the right to use. Film and show titles, posters and artwork seen in the app and in the screenshots on this site belong to their owners and are shown only to illustrate how Makimedia displays a library. <a href="legal.html">Read the legal notice</a>.</p>
+    </div>
+  </section>
+
+  <section class="cta" id="download">
+    <div class="wrap">
+      <h2>Get Makimedia</h2>
+      <div class="buttons">
+        <a class="btn primary" href="MICROSOFT_STORE_URL" target="_blank" rel="noopener">
+          <span class="ico i-microsoft" aria-hidden="true"></span>
+          <span><small>Get it from</small><strong>Microsoft Store</strong></span>
+        </a>
+        <a class="btn primary" href="GOOGLE_PLAY_URL" target="_blank" rel="noopener">
+          <span class="ico i-google-play" aria-hidden="true"></span>
+          <span><small>Get it on</small><strong>Google Play</strong></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="tmdb">
+      <img src="assets/tmdb-logo.svg" alt="TMDB">
+      <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+    </div>
+    <nav class="footer-links">
+      <a href="blog.html">Blog</a>
+      <a href="help.html">Help</a>
+      <a href="contribute.html">Contribute</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="legal.html">Legal notice</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/Ognjen14/Makimedia" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/Ognjen14/Makimedia/blob/main/LICENSE" target="_blank" rel="noopener">Licence</a>
+    </nav>
+    <p class="copyright">Makimedia is a video player. It doesn't provide any films or shows and isn't a streaming service; it plays files you already have. &copy; 2026 TopicDev. Free software under the GNU General Public License v2 or later.</p>
+  </div>
+</footer>
+
+<script src="script.js?v=14"></script>
+<script src="nav.js?v=2"></script>
+</body>
+</html>

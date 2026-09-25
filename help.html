@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Help - Makimedia</title>
+  <meta name="description" content="Getting started with Makimedia, streaming from your PC to your phone, tablet or TV, answers to common questions, and fixes when something goes wrong.">
+  <meta name="theme-color" content="#1F1F1F">
+  <link rel="canonical" href="https://makimedia.org/help.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Makimedia">
+  <meta property="og:title" content="Makimedia help">
+  <meta property="og:description" content="Getting started with Makimedia, streaming from your PC to your phone, tablet or TV, answers to common questions, and fixes when something goes wrong.">
+  <meta property="og:url" content="https://makimedia.org/help.html">
+  <meta property="og:image" content="https://makimedia.org/assets/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=28">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-68.png" width="34" height="34" alt="">
+      Makimedia
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="index.html#features">Features</a>
+      <a href="blog.html">Blog</a>
+      <a href="help.html" aria-current="page">Help</a>
+      <a href="contribute.html">Contribute</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-github" href="https://github.com/Ognjen14/Makimedia" target="_blank" rel="noopener"><span class="ico i-github" aria-hidden="true"></span><span class="nav-github-label">GitHub</span></a>
+    </nav>
+    <div class="header-actions">
+      <a class="nav-cta" href="index.html#download"><span class="ico i-download" aria-hidden="true"></span>Download</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span class="ico i-menu icon-open" aria-hidden="true"></span><span class="ico i-close icon-close" aria-hidden="true"></span></button>
+    </div>
+  </div>
+</header>
+
+<main class="contrib-page wrap">
+  <div class="contrib-head">
+    <h1>Help</h1>
+    <p>How to set up your library, how to watch it on your other screens, and what to do when something doesn't work.</p>
+    <nav class="jump-links" aria-label="Help topics">
+      <a href="#start">Getting started</a>
+      <a href="#streaming">Streaming from your PC</a>
+      <a href="#faq">Questions</a>
+      <a href="#troubleshooting">Troubleshooting</a>
+    </nav>
+  </div>
+
+  <section class="way" id="start">
+    <span class="way-icon"><span class="ico i-getting-started" aria-hidden="true"></span></span>
+    <div class="way-body">
+      <h2>Getting started</h2>
+      <p>Makimedia turns the videos you already have into a library. It needs to know where they are, and then it does the rest by itself.</p>
+
+      <div class="faq">
+        <details id="windows">
+          <summary>On Windows<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>The first time you open Makimedia, choose <em>Choose a folder</em> and pick the folders where you keep your films and shows. You can pick several at once. Makimedia only reads the folders you pick.</p>
+          <p>To add or remove folders later, open <em>Settings, Scan folders</em>. Removing a folder takes its files out of the library, but nothing on your disk is ever touched.</p>
+        </details>
+        <details id="android">
+          <summary>On Android phones, tablets and TVs<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>There are no folders to pick. Tap <em>Allow access to videos</em>, and Makimedia finds the videos on the device by itself, including a memory card. When a new drive is plugged in, it asks whether to scan it.</p>
+          <p>On a TV you can also choose <em>Continue without them</em>, if your films live on a PC and you only want to <a href="#streaming">stream from it</a>.</p>
+        </details>
+        <details id="first-scan">
+          <summary>The first scan<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>Makimedia then reads your files and looks up each title on TMDB for its poster, overview and cast. This only takes long the first time. Each title is looked up once and kept on your device afterwards.</p>
+          <p>No internet? Your videos still appear and play. They're matched when the connection is back.</p>
+        </details>
+        <details id="naming">
+          <summary>Naming your files<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>Makimedia works out what a video is from the name of the file and the folders above it. You don't need to clean names up, but a title and a year go a long way. Films are happiest in a folder of their own:</p>
+          <pre class="tree"><code>Films/
+  Heat (1995)/
+    Heat (1995).mkv</code></pre>
+          <p>A show wants a folder per show and a folder per season:</p>
+          <pre class="tree"><code>Shows/
+  The Wire (2002)/
+    Season 01/
+      The.Wire.S01E01.mkv</code></pre>
+          <ul class="ticks">
+            <li><span class="ico i-check" aria-hidden="true"></span><span><strong>Put the year in the name.</strong> It separates a remake from the original, and a film from a show with the same name.</span></li>
+            <li><span class="ico i-check" aria-hidden="true"></span><span><strong>Episodes</strong> are recognised from <code>S01E02</code>, <code>1x02</code> or <code>Season 1 Episode 2</code>. <code>S00E01</code> is a special.</span></li>
+            <li><span class="ico i-check" aria-hidden="true"></span><span><strong>Everything after the year or episode number is ignored</strong>, such as resolution, source, codec or release group.</span></li>
+            <li><span class="ico i-check" aria-hidden="true"></span><span><strong>Subtitles</strong> are found beside the film when their name starts with the film's, like <code>Heat (1995).en.srt</code>, or in a <code>Subs</code> folder next to it.</span></li>
+          </ul>
+          <p>The full rules are in the app, under <em>Settings, How your library is read</em> on Windows, phones and tablets.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="way" id="streaming">
+    <span class="way-icon"><span class="ico i-streaming" aria-hidden="true"></span></span>
+    <div class="way-body">
+      <h2>Streaming from your PC</h2>
+      <p>Your Windows PC can share its whole library with every phone, tablet and TV running Makimedia at home. There's no server to set up and no address to type.</p>
+      <ol class="steps">
+        <li><strong>On the PC</strong>, open the menu on the side, choose <em>Stream to devices</em> and press <em>Start streaming</em>.</li>
+        <li><strong>On the phone, tablet or TV</strong>, open Makimedia. The PC appears at the top of Home, saying it is streaming. Choose <em>Connect</em>.</li>
+        <li><strong>Watch.</strong> The PC's films and shows appear with their posters and your progress. The video stays on your home network.</li>
+      </ol>
+      <p>You can also connect from <em>Settings, Streaming</em>, which lists every PC streaming on your network. That's also where you disconnect, and this device's own films come back.</p>
+
+      <div class="faq">
+        <details id="not-found">
+          <summary>The device doesn't find the PC<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <ol class="steps">
+            <li><strong>Set the network to Private.</strong> In Windows, open <em>Settings, Network &amp; internet</em>, choose your Wi-Fi or Ethernet connection and set its network profile to <em>Private</em>. On a public network, Windows hides the PC from other devices.</li>
+            <li><strong>Let Makimedia through the firewall.</strong> If Windows asks whether Makimedia may use the network, allow it on private networks. If you dismissed that question, allow Makimedia in <em>Windows Security, Firewall &amp; network protection, Allow an app through firewall</em>.</li>
+            <li><strong>Check that both are on the same network.</strong> A guest Wi-Fi network, or a router that keeps wireless devices apart from each other, stops them from seeing one another.</li>
+          </ol>
+          <p>Makimedia finds the PC by itself, so there's no address to type in. If it still doesn't appear, <a href="contact.html">write to us</a> and choose <em>Streaming help</em>.</p>
+        </details>
+        <details id="while-streaming">
+          <summary>Good to know while streaming<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <ul class="ticks">
+            <li><span class="ico i-check" aria-hidden="true"></span><span><strong>Nothing plays on the PC while it streams.</strong> Its page shows what each device is watching instead. Press <em>Stop streaming</em> to use it again; each device keeps the place it reached.</span></li>
+            <li><span class="ico i-check" aria-hidden="true"></span><span><strong>Closing the window can keep it streaming.</strong> Turn on <em>Settings, Keep running when the window is closed</em>, and Makimedia waits in the notification area. Right-click its icon to quit.</span></li>
+            <li><span class="ico i-check" aria-hidden="true"></span><span><strong>Use the same version everywhere.</strong> A device running a different version of Makimedia from the PC is asked to update first.</span></li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="way" id="faq">
+    <span class="way-icon"><span class="ico i-question" aria-hidden="true"></span></span>
+    <div class="way-body">
+      <h2>Questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Is Makimedia really free?<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>Yes. No ads, no subscription, no account and no tracking. It's open source under the GNU General Public License, and the <a href="https://github.com/Ognjen14/Makimedia" target="_blank" rel="noopener">code is on GitHub</a>.</p>
+        </details>
+        <details>
+          <summary>Does Makimedia come with films or shows?<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>No. It's a player, not a streaming service like Netflix. It has no catalogue of its own and plays only files you already have. See the <a href="legal.html">legal notice</a>.</p>
+        </details>
+        <details>
+          <summary>Do I need an internet connection?<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>Only to fetch posters and details, once per title. Your library and your videos work with the network off, and streaming from your PC only needs your home network.</p>
+        </details>
+        <details>
+          <summary>Do I need a PC?<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>No. Phones, tablets and TVs play the videos stored on them. A Windows PC is only needed to <a href="#streaming">stream</a> its library to your other devices.</p>
+        </details>
+        <details>
+          <summary>Which devices does it run on?<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>Windows 10 and 11, Android phones and tablets, and Android TV.</p>
+        </details>
+        <details id="formats">
+          <summary>Which file formats does it play?<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>These videos are added to the library: <code>mkv</code> <code>mp4</code> <code>avi</code> <code>mov</code> <code>webm</code> <code>m4v</code> <code>ts</code> <code>m2ts</code> <code>mts</code> <code>wmv</code> <code>flv</code> <code>mpg</code> <code>mpeg</code> <code>ogv</code> <code>3gp</code> <code>divx</code> <code>vob</code> <code>rmvb</code>.</p>
+          <p>These subtitles are picked up: <code>srt</code> <code>ass</code> <code>ssa</code> <code>sub</code> <code>vtt</code> <code>idx</code>. Whether a particular file plays also depends on what the device's decoder can handle.</p>
+        </details>
+        <details>
+          <summary>Where does my data go?<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>Your library, watch history and settings stay on your device. To find a poster, Makimedia asks TMDB about the title it's looking up, and nothing else is sent anywhere. Read the <a href="privacy.html">privacy policy</a>.</p>
+        </details>
+        <details>
+          <summary>Will Makimedia change or delete my files?<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>No. It only reads them. Removing a folder or a file from the library leaves it on your disk, and <em>Settings</em> can put anything you removed back.</p>
+        </details>
+        <details id="wrong-match">
+          <summary>A film has the wrong poster. How do I fix it?<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>Open the film or show and use <em>Fix match</em>. Search for the right title and choose it. Your choice is remembered, so a later scan won't undo it, and for a show it fixes every episode at once.</p>
+          <p>Titles Makimedia wasn't sure about wait under <em>Suggested</em> in the menu, and files it couldn't name at all are under <em>Unmatched</em>.</p>
+        </details>
+        <details>
+          <summary>A video isn't a film or a show. Can I take it out?<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>Yes. Open it and choose <em>Remove from library</em> from its menu. The file stays on disk, and <em>Settings, Removed from library</em> puts it back.</p>
+        </details>
+        <details>
+          <summary>How do I add subtitles?<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>Name the subtitle file after the video and keep it beside it, and it loads by itself. While a video plays, you can also choose <em>Add a subtitle file</em> from the subtitles menu.</p>
+          <p>On Windows, <em>Find subtitles online</em> searches opensubtitles.com. It uses your own free opensubtitles.com account, which you sign in to under <em>Settings, Subtitles</em>.</p>
+        </details>
+        <details>
+          <summary>Where are the keyboard shortcuts and gestures?<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>In the app, under <em>Settings</em>: <em>Keyboard shortcuts</em> on a PC, <em>Gestures</em> on a touchscreen, and <em>The remote</em> on a TV.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="way" id="troubleshooting">
+    <span class="way-icon"><span class="ico i-troubleshooting" aria-hidden="true"></span></span>
+    <div class="way-body">
+      <h2>Troubleshooting</h2>
+
+      <div class="faq">
+        <details id="missing">
+          <summary>A video is missing from the library<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <ul class="ticks">
+            <li><span class="ico i-check" aria-hidden="true"></span><span><strong>Check its format</strong> is one of the <a href="#formats">video formats</a> Makimedia reads.</span></li>
+            <li><span class="ico i-check" aria-hidden="true"></span><span><strong>On Windows</strong>, check that its folder is in <em>Settings, Scan folders</em>, and use <em>Rescan all</em> after adding new files.</span></li>
+            <li><span class="ico i-check" aria-hidden="true"></span><span><strong>On Android</strong>, Makimedia needs access to all your videos. If only some were allowed, <em>Settings</em> shows a <em>Videos on this device</em> row that fixes it.</span></li>
+            <li><span class="ico i-check" aria-hidden="true"></span><span><strong>Maybe it's there without a title.</strong> Look under <em>Unmatched</em> in the menu, then use <a href="#wrong-match">Fix match</a>.</span></li>
+          </ul>
+        </details>
+        <details id="wont-play">
+          <summary>A video won't play<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>When a file can't be played, Makimedia says so with <em>This one will not play</em> and gives the reason. The most common is that the device's decoder doesn't support the video's format; it may play on another device, such as your PC. Videos in 8K aren't supported.</p>
+        </details>
+        <details id="file-not-found">
+          <summary>The app says "File not found"<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>The file was moved or deleted, or its drive is disconnected. Reconnect the drive, or rescan the folder the file is in now. Until then it stays in your library with its watch history.</p>
+        </details>
+        <details id="stutter">
+          <summary>Playback stutters<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>Look at the top of the player while a video plays. Under the title it shows either <em>hw:</em> and the hardware decoder in use, or <em>software decoding</em>. Software decoding of large 4K videos can be too much for smaller devices.</p>
+          <p>On Windows, <em>Settings, Force hardware decoding</em> also tries decoders that are normally skipped. Turn it off again if you see artefacts or a file stops playing.</p>
+        </details>
+        <details id="subtitles">
+          <summary>Subtitles don't show on Android TV<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>Picture-based subtitles (PGS, VobSub and DVB, common on Blu-ray and DVD rips) can't be shown on Android TV. The subtitles menu marks them as a picture subtitle the TV can't show. Use a text subtitle such as an <code>srt</code> file instead.</p>
+        </details>
+        <details id="subtitle-sync">
+          <summary>Subtitles are out of sync<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>While the video plays, open <em>Delay</em> and shift the subtitles against the audio, a tenth of a second at a time.</p>
+        </details>
+        <details id="streaming-problems">
+          <summary>Streaming doesn't connect or stops<span class="ico i-chevron-down" aria-hidden="true"></span></summary>
+          <p>If the device can't see the PC, follow <a href="#not-found">The device doesn't find the PC</a>. If the connection drops while you watch, the film stops where it was and picks up from there the next time you connect.</p>
+        </details>
+      </div>
+
+      <div class="info-box" id="still-stuck">
+        <h3>Still stuck?</h3>
+        <p class="info-lead">Write to us, and include your device, what you did and what happened. The log file helps most of all: the <a href="contribute.html#bugs">Contribute page</a> explains where to find it.</p>
+        <div class="help-actions">
+          <a class="btn primary" href="contact.html">
+            <span class="ico i-send" aria-hidden="true"></span>
+            <span><small>Get in touch</small><strong>Contact us</strong></span>
+          </a>
+          <a class="text-link" href="https://github.com/Ognjen14/Makimedia/issues" target="_blank" rel="noopener">Report it on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="tmdb">
+      <img src="assets/tmdb-logo.svg" alt="TMDB">
+      <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+    </div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="help.html" aria-current="page">Help</a>
+      <a href="contribute.html">Contribute</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="legal.html">Legal notice</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://github.com/Ognjen14/Makimedia" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/Ognjen14/Makimedia/blob/main/LICENSE" target="_blank" rel="noopener">Licence</a>
+    </nav>
+    <p class="copyright">Makimedia is a video player. It doesn't provide any films or shows and isn't a streaming service; it plays files you already have. &copy; 2026 TopicDev. Free software under the GNU General Public License v2 or later.</p>
+  </div>
+</footer>
+
+<script src="help.js?v=2"></script>
+<script src="nav.js?v=2"></script>
+</body>
+</html>
