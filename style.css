@@ -996,6 +996,7 @@ html.lightbox-open {
   object-fit: contain;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
   cursor: zoom-in;
+  touch-action: none;
   transform-origin: center;
   transition: transform 0.25s ease;
   -webkit-user-select: none;
@@ -1004,11 +1005,13 @@ html.lightbox-open {
 
 .lightbox.is-zoomed .lightbox-canvas img {
   cursor: grab;
-  touch-action: none;
 }
 
 .lightbox.is-dragging .lightbox-canvas img {
   cursor: grabbing;
+}
+
+.lightbox.is-instant .lightbox-canvas img {
   transition: none;
 }
 
@@ -1050,8 +1053,7 @@ html.lightbox-open {
   visibility: hidden;
 }
 
-.lightbox-close,
-.lightbox-zoom {
+.lightbox-close {
   position: absolute;
   top: 14px;
   right: 14px;
@@ -1068,25 +1070,75 @@ html.lightbox-open {
   cursor: pointer;
 }
 
-.lightbox-zoom {
-  right: 68px;
-}
-
-.lightbox-close:hover,
-.lightbox-zoom:hover {
+.lightbox-close:hover {
   border-color: #F23636;
   color: #FF6B6B;
 }
 
-.lightbox-zoom[aria-pressed="true"] {
-  border-color: #F23636;
-  background: rgba(242, 54, 54, 0.18);
-}
-
-.lightbox-close .ico,
-.lightbox-zoom .ico {
+.lightbox-close .ico {
   width: 20px;
   height: 20px;
+}
+
+.lightbox-tools {
+  position: absolute;
+  top: 14px;
+  right: 68px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 44px;
+  padding: 0 3px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lightbox-tool,
+.lightbox-level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #FFFFFF;
+  font: inherit;
+  cursor: pointer;
+}
+
+.lightbox-tool {
+  width: 36px;
+}
+
+.lightbox-tool .ico {
+  width: 18px;
+  height: 18px;
+}
+
+.lightbox-level {
+  min-width: 56px;
+  padding: 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.lightbox-tool:hover:not(:disabled),
+.lightbox-level:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #FF6B6B;
+}
+
+.lightbox-tool:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.lightbox.is-zoomed .lightbox-tools {
+  border-color: #F23636;
 }
 
 .gallery.tablet .frame {
