@@ -903,8 +903,8 @@ h1 .accent {
 }
 
 .gallery.phone {
-  --w: 300px;
-  --ar: 9 / 19.5;
+  --w: 400px;
+  --ar: 1080 / 2316;
 }
 
 .strip {
@@ -2873,7 +2873,7 @@ code {
   }
 
   .gallery.phone {
-    --w: 200px;
+    --w: 240px;
   }
 
   .device-tabs {
