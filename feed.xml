@@ -6,7 +6,16 @@
     <description>Release notes and news from Makimedia, the free video player for Windows, Android and Android TV.</description>
     <language>en</language>
     <atom:link href="https://makimedia.org/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 25 Sep 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 01 Oct 2026 12:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Makimedia is on the Microsoft Store</title>
+      <link>https://makimedia.org/blog/makimedia-on-the-microsoft-store.html</link>
+      <guid isPermaLink="true">https://makimedia.org/blog/makimedia-on-the-microsoft-store.html</guid>
+      <pubDate>Thu, 01 Oct 2026 12:00:00 GMT</pubDate>
+      <category>Release</category>
+      <description>Makimedia 1.0 for Windows is out: a free video player that turns your folders into a library. Android and Android TV are next.</description>
+    </item>
 
     <item>
       <title>Hello, makimedia.org</title>
