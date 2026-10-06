@@ -705,10 +705,12 @@ a {
   height: auto;
 }
 
-.art .mm-house { fill: var(--ill-paper); stroke: var(--ill-line); stroke-width: 3; stroke-linejoin: round; opacity: 0.85; }
-.art .mm-roof { fill: none; stroke: var(--ill-ink); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
+.art .mm-house { fill: color-mix(in srgb, var(--ill-gold) 7%, var(--bg)); stroke: color-mix(in srgb, var(--ill-gold) 40%, transparent); stroke-width: 3; stroke-linejoin: round; }
+.art .mm-floorline { fill: none; stroke: color-mix(in srgb, var(--ill-gold) 30%, transparent); stroke-width: 3; stroke-linecap: round; }
+.art .mm-roof { fill: none; stroke: var(--ill-gold); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
+.art .mm-title { fill: var(--text); letter-spacing: 0.12em; }
 .art .mm-cloud { fill: var(--ill-mid); }
-.art .mm-nolink { fill: none; stroke: var(--ill-ink); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 6 8; opacity: 0.45; }
+.art .mm-nolink { fill: none; stroke: var(--text-2); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 6 8; opacity: 0.6; }
 .art .mm-x circle { fill: var(--ill-gold); }
 .art .mm-x path { fill: none; stroke: #FFFFFF; stroke-width: 3.5; stroke-linecap: round; }
 
