@@ -4,7 +4,7 @@ The website for [Makimedia](https://github.com/Ognjen14/Makimedia), a free, open
 
 Published at **[makimedia.org](https://makimedia.org)** with GitHub Pages.
 
-It also hosts the page of Reroll, Makimedia's sister app, with its privacy policy and terms of use (`reroll.html` and `reroll/`).
+The other TopicDev apps have their own pages on [topicdev.com](https://topicdev.com/), linked from here as "More from TopicDev".
 
 ## Contact
 
